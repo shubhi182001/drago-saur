@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aqua;
+    overflow: hidden; /* if anything is overflowing, that will get hidden. like here scroll bar gets hidden. */
+}
+
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+.obstacle{
+    background-image: url(dragon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
+
+
+
+ .animateDino{
+    animation: dino 0.6s linear;
+
+}
+ @keyframes dino {              /* for animation */
+     0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 444px;
+    }
+    100%{
+        bottom: 0;
+    }
+} 
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+
+}
+@keyframes obstacleAni {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+    
+} 
+
+ #scoreCont{
+    position: relative;
+    left: 23px;
+    top: -46px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    width: 112px;
+    font-weight: bold;
+}
